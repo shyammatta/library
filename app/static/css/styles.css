@@ -1,0 +1,332 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgba(128, 0, 128, 0.876);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+} 
+nav ul {
+    display: flex;
+
+
+
+}
+nav li a{
+    color: white;
+    font-size: 22px;
+    width: 100px;
+    text-decoration: none;
+    margin-left: 70px;
+
+}
+nav li a:hover{
+    color: yellow;
+}
+nav li{
+    list-style-type: none;
+}
+#logout{
+    margin-left: 720px;
+    background-color: #09ae03;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+#logout a{
+    text-decoration: none;
+    color: white;
+}
+label{
+    display: flex;
+}
+  
+.login-container{
+    
+
+    
+    max-width: 300px;
+    margin: 90px auto;
+    padding: 20px;
+    background: #fff;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+.login-container label{
+    font-size: 18px;
+}
+.login-container input{
+    outline: none;
+
+}
+/* .login-container #user{
+    color: black;
+} */
+#logins{
+    height: 300px;
+    margin: 10px auto;
+
+      }
+      #loginsh1{
+        text-align: center;
+        color: blueviolet;
+        font-size: 28px;
+
+      }
+
+.login-container #login-form{
+    margin: 40px auto;
+}
+
+
+#loginbackground {
+    
+    background-image: linear-gradient(rgb(0,0,0,0.4), rgb(0,0,0,0.3)), url('../loginbackground.webp');
+        /* background-image: url('../loginbackground.webp'); Adjust the path as per your directory structure */
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif; /* Optional: Specify a font-family */
+        margin: 0;
+        padding: 0;
+    }
+    
+#bookmangbackground{
+
+        background-image: url("../bookback.jpeg");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif; /* Optional: Specify a font-family */
+        margin: 0;
+        padding: 0;
+
+}
+
+#bookhead{
+        color: rgb(26, 1, 1);
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .book-management-container{
+    max-width: fit-content;
+    margin: 50px auto;
+    padding: 20px;
+    background: #d0f4ec65;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+#bookset{
+        width: 1000px;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+            }
+            legend{
+                background-color: rgb(90, 194, 246);
+                width: 170px;
+                height: 30px;
+                border-radius: 15px;
+                padding: 3px;
+            }
+
+            .books{
+                background: #9e91cd97;
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                border-radius: 10px;
+
+            }
+            .books:hover{
+                background-color:rgba(19, 83, 161, 0.56) ;
+            }
+           
+            .book-management-container label:hover{
+                color: rgba(255, 255, 255, 0.986);
+            }
+.book-management-container #bookmbutton{
+    margin-top: 20px;
+    width: 200px;
+}
+#bookbutton{
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type=text], input[type=password], button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.lend-container{
+    max-width: 700px;
+    margin-top: 140px;
+    margin-left: 30px;
+    padding: 20px;
+    /* background: #ffffffd3; */
+
+    background: #2a2a2b8b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 3px solid rgb(247, 242, 252);
+
+}
+/* .lend-container:hover{
+    background-color: rgba(232, 192, 246, 0.531);
+} */
+
+#lendbg {
+    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url('../lendbg.jpg');
+
+    /* background-image: url('../lendbg.jpg'); Adjust the path as per your directory structure */
+
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    font-family: Arial, sans-serif; /* Optional: Specify a font-family */
+    margin: 0;
+    padding: 0;
+}
+.lend-container h2,th,td{
+    color: white;
+    font-size: 23px;
+}
+
+.lend-container  #start{
+    color: rgba(63, 204, 11, 0.992);
+    font-size: 23px;
+    
+}
+.lend-container  #end{
+    color: red;
+    font-size: 23px;
+    
+}
+.lend-container #nbook{
+    color: yellow;
+    font-size: 22px;
+    font-family:sans-serif;
+
+}
+.lend-container #lendbutton{
+    width: 100px;
+    text-align: center;
+}
+.lend-container td{
+    border:  2px solid rgba(252, 249, 251, 0.77);
+}
+.lend-container th{
+    border:  2px solid white;
+}
+.cart-container th,td{
+    color: black;
+    
+}
+.cart-container  #book{
+    color: rgba(27, 25, 26, 0.992);
+    font-size: 23px;
+    
+}
+.cart-container #cart-items td{
+    color: #7f0da8;
+    font-weight: bold;
+    font-size: 20px;
+
+    
+}
+#cartbg{
+    background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)), url('../cartbg.avif');
+
+    /* background-image: url('../cartbg.avif'); Adjust the path as per your directory structure */
+
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    font-family: Arial, sans-serif; /* Optional: Specify a font-family */
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    width: 700px;
+    margin: 190px auto;
+    padding: 30px;
+    background: #ffffffd3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.cart-container  #start{
+    color: rgba(63, 204, 11, 0.992);
+    font-size: 23px;
+    
+}
+.cart-container  #end{
+    color: red;
+    font-size: 23px;
+    
+}
+#cart-items #cbook{
+    color: rgb(214, 6, 48);
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #18171769;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

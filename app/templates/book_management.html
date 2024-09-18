@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+    <style>
+        label{
+            font-size: 20px;
+            color: rgba(33, 6, 156, 0.8);
+            padding: 4px;
+            
+        }
+        h3{
+            font-size: 25px;
+            color: crimson;
+        }
+        
+    </style>
+</head>
+<body id="bookmangbackground">
+
+    
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('book_management')}}">Categories</a></li>
+            <li><a href="{{ url_for('lend') }}">Lend Books</a></li>
+            <li><a href="{{ url_for('cart_page') }}">Cart</a></li>
+        </ul>
+
+            <button id="logout"><a href="{{ url_for('login') }}" >Logout</a></button>
+    </nav>
+    <div class="book-management-container">
+        <h2 id="bookhead">Book Management</h2>
+        <form id="book-form" action="{{ url_for('book_management') }}" method="POST">
+            <fieldset id="bookset">
+                <legend>Categories</legend>
+            <div id="horrors" class="books">
+                <h3>Horror</h3>
+                <label><input type="checkbox" name="book" value="House of Leaves">House of Leaves</label>
+                <label><input type="checkbox" name="book" value="Rosemary's Baby">Rosemary's Baby</label>
+                <label><input type="checkbox" name="book" value="Night Film">Night Film</label>
+            </div>
+            <div id="comedy" class="books">
+                <h3>Comedy</h3>
+                <label><input type="checkbox" name="book" value="Daddy's Boy">Daddy's Boy</label>
+                <label><input type="checkbox" name="book" value="Bossypants">Bossypants</label>
+                <label><input type="checkbox" name="book" value="Yes Please">Yes Please</label>
+            </div>
+            <div id="Thirller" class="books">
+                <h3>Thriller</h3>
+                <label><input type="checkbox" name="book" value="Sherlock Holmes">Sherlock Holmes</label>
+                <label><input type="checkbox" name="book" value="Gone Girl">Gone Girl</label>
+                <label><input type="checkbox" name="book" value="Dark Matter">Dark Matter</label>
+            </div>
+            <div id="fiction" class="books">
+                <h3>Fiction</h3>
+                <label><input type="checkbox" name="book" value="The Fury">The Fury</label>
+                <label><input type="checkbox" name="book" value="A Little Life">A Little Life</label>
+                <label><input type="checkbox" name="book" value="The Exachange">The Exachange</label>
+            </div>
+            </fieldset>
+            <div id="bookbutton">
+            <button type="submit" id="bookmbutton">Add to Cart</button>
+        </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='script/script.js')}}"></script>
+
+</body>
+</html>

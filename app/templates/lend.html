@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lend Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+    <style>
+        body{
+            background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.4));
+
+        }
+    </style>
+</head>
+<body id="lendbg">
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('book_management')}}">Categories</a></li>
+            <li><a href="{{ url_for('lend') }}">Lend Books</a></li>
+            <li><a href="{{ url_for('cart_page') }}">Cart</a></li>
+        </ul>
+
+            <button id="logout"><a href="{{ url_for('login') }}" >Logout</a></button>
+    </nav>
+    <div class="lend-container">
+        <h2>Lend Details</h2>
+        <form id="lend-form" action="{{ url_for('lend') }}" method="POST">
+            <table id="lend-table">
+                <thead>
+                    <tr>
+                        <th>Book</th>
+                        <th id="start">Start Date</th>
+                        <th id="end">End Date</th>
+                    </tr>
+                </thead>
+                <tbody id="lend-items">
+                    {% for book in selected_books %}
+                    <tr>
+                        <td id="nbook">{{ book.name }}</td>
+                        <td><input type="date" name="start_date" id="start_date" onchange="updateEndDate(this)"></td>
+                        <td><input type="date" name="end_date" id="end_date" readonly></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit" id="lendbutton">Confirm Lend</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='script/script.js')}}"></script>
+
+</body>
+</html>
